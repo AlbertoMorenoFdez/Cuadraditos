@@ -21,9 +21,7 @@ article {
 }
 
 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     width: 10vw;
     height: 15vh;
     background-color: lightskyblue;
