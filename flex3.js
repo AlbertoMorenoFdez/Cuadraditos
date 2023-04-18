@@ -31,24 +31,25 @@ switch (cuadro) {
 }
 
 // Imprimir una piramide a partir de la columna 20, de 3 filas y 5 columnas usando la letra o
-        var piramide = '';
-        var filas = 3;
-        var letra = 'o';
-        var espacioInicial = 20;
+// Sacado del ejercicio anterior de clase
+var piramide = '';
+var filas = 3;
+var letra = 'o';
+var espacioInicial = 20;
 
-        for (var i = 0; i < filas; i++) {
-            for (var j = 0; j < i-2; j++) {
-                piramide += ' ';
-            }
-            for (var k = 0; k < 2 * i + 1; k++) {
-                piramide += letra;
-            }
-            piramide += '\n';
-        }
+for (var i = 0; i < filas; i++) {
+    for (var j = 0; j < i - 2; j++) {
+        piramide += ' ';
+    }
+    for (var k = 0; k < 2 * i + 1; k++) {
+        piramide += letra;
+    }
+    piramide += '\n';
+}
 
-        var resultado = '<pre>' + piramide + '</pre>';
-        
-    
+var resultado = '<pre>' + piramide + '</pre>';
+
+
 //Pedimos el color en el que quiere que se pinte la piramide
 var color = prompt("Elige un color para el texto: (a) rojo, (b) azul, (c) verde", "");
 
