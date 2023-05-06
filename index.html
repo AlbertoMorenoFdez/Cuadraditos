@@ -1,25 +1,32 @@
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS display flex</title>
-	<link rel="stylesheet" type="text/css" href="./cuadraditos.css" />
+    <title>Indice trabajos 3T</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
 </head>
+
 <body>
-    <main id="todo">
-        <article>
-            <div id="c1">1</div>
-            <div id="c2">2</div>
-        </article>
-        <article id="fc">
-            <div id="c3">3</div>
-        </article>
-        <article>
-            <div id="c4">4</div>
-            <div id="c5">5</div>
-        </article>
-    </main>
-    
+    <h1>MENU</h1>
+    <div class="contenedor-botonera">
+        <button class="boton"><a href="index1.html">Cuadraditos</a></button>
+        <button class="boton"><a href="index2.html">Un saludo</a></button>
+        <button class="boton"><a href="index4.html">Pirámide de colores</a></button>
+        <button class="boton"><a href="colorinchejs.html">Botón derecho toma, botón izquierdo pinta</a></button>
+        <button class="boton"><a href="3enRaya Array.html">Un juego</a></button>
+        <button class="boton" onclick="mostrarMensaje()">"Más información"</button>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            var mensaje = "Alberto Moreno Fernandez. 1º DAW 2022 - 2023\n\nTema del proyecto final: \"Webshop de bicicletas\"";
+            alert(mensaje);
+        }
+    </script>
+
 </body>
+
 </html>

@@ -2,7 +2,7 @@
 
 //pedimos el numero de cuadro donde excribir: HOLA 
 //Pero ahora usaremos el switch
-var cuadro = prompt("Dime en que cuadro quieres saludar (1 a 5)", "");
+var cuadro = prompt("Dime en que cuadro quieres pintar la pirámide (1 a 5)", "");
 cuadro = parseInt(cuadro);
 // cuadro sera una variable numerica entre 1 y 5
 
