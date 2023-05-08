@@ -39,6 +39,7 @@ function pintarSimbolo(identificador) {
     }
 }
 
+
 function hayGanador() {
     let simbolo;
     // Comprobar filas
