@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./bicicleta.css" />
+    <title>Bicicletas</title>
+</head>
+
+<body>
+    <section id="ajustes">
+
+        <div id="zonaModo">
+            <p>¿Modo dia o modo noche?</p>
+            <div class="botonesModo">
+                <img id="dia" src="./dia.png" onclick="ponerModoDia()">
+                <img id="noche" src="./noche.png" onclick="ponerModoNoche()">
+            </div>
+        </div>
+        <div class="colores">
+            <p id="esteParrafo">Elija un color y un tamaño para leer el texto</p>
+            <input type="color" name="colorElegido" />
+        </div>
+        <div class="tamañoFuente">
+            <select name="tamFuente">
+                <option value="0.8">Pequeña</option>
+                <option value="1.0" selected="selected">Mediana</option>
+                <option value="1.4">Grande</option>
+            </select>
+        </div>
+
+        <button class="botonAjuste" type="button" onclick="aplicarCambios()">APLICAR</button>
+        <p id="mensaje"></p>
+
+    </section>
+    <div class="banner">
+        <a href="./bicicleta1.html">Mountain Bike</a>
+        <a href="./bicicleta2.html">Road Bike</a>
+        <a href="./bicicleta3.html">eBike</a>
+        <a href="./bicicleta4.html">Urban</a>
+    </div>
+    <div class="cuadrado">
+        <p>Probando</p>
+        <p>Probando</p>
+        <div class="imagenROAD"></div>
+    </div>
+   
+    <script>
+        function aplicarCambios() {
+            var color = document.getElementsByName('colorElegido')[0];
+            console.log('color elegido ' + color.value);
+    
+            var tam = document.getElementsByName('tamFuente')[0];
+            var tamelegido = tam[tam.selectedIndex].value;
+    
+            document.documentElement.style.fontSize = parseFloat(tamelegido) + "rem";
+            document.documentElement.style.setProperty("--colorNormal", color.value);
+            document.getElementById('mensaje').innerHTML = "APLICADO";
+        }
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            var botonAjuste = document.querySelector(".botonAjuste");
+            var imagen = document.querySelector(".cuadrado .imagenROAD");
+    
+            botonAjuste.addEventListener("click", function () {
+                imagen.style.opacity = "0.3";
+            });
+        });
+    </script>
+
+</body>
+
+</html>

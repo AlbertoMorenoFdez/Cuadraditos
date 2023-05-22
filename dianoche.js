@@ -3,7 +3,7 @@ var modo = leerModoActual();
 if (modo == "dia") {
     ponerModoDia();
 } else {
-    pornerModoNoche();
+    ponerModoNoche();
 }
 
 function leerModoActual() {
