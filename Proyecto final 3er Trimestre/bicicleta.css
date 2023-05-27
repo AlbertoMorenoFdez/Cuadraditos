@@ -1,11 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-:root{
+:root {
     font-size: 1rem;
-    --colorNormal:black;
+    --colorNormal: black;
 }
 
+.contenedor-botonera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 60px;
+}
+
+.contenedor-botonera-bicicleta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+
+}
+
+.boton {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #f5c44a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.boton a {
+    color: #4e0117;
+    text-decoration: none;
+}
 
 
 body {
@@ -15,7 +46,6 @@ body {
     background-color: black;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
 }
 
@@ -24,18 +54,18 @@ body {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    
     /* background-color: #4e0117; */
     height: 60px;
-    
+
 }
 
 #banner a {
     flex: 1;
     text-align: center;
-    /* color: #f5c44a; */
     color: inherit;
     text-decoration: none;
-    border-right: 2px solid rgb(245, 196, 74);
+    border-right: 2px solid #f5c44a;
 }
 
 #banner a:last-child {
@@ -51,20 +81,9 @@ body {
     overflow: hidden;
 }
 
-/* .cuadrado::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    transition: opacity 0.3s ease;
-} */
-
 .cuadrado p {
     position: absolute;
-    color:var(--colorNormal);
+    color: var(--colorNormal);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -75,8 +94,8 @@ body {
     display: block;
     color: var(--colorNormal);
     text-align: justify;
-    
-  }
+
+}
 
 .cuadrado .imagenMTB {
     position: relative;
@@ -90,7 +109,9 @@ body {
 }
 
 .cuadrado .imagenMTB:hover {
-    opacity: 0.3;
+    opacity: 0.1;
+    transition: 1s;
+    
 }
 
 .cuadrado .imagenROAD {
@@ -104,7 +125,8 @@ body {
 }
 
 .cuadrado .imagenROAD:hover {
-    opacity: 0.3;
+    opacity: 0.1;
+    transition: 1s;
 }
 
 
@@ -119,7 +141,8 @@ body {
 }
 
 .cuadrado .imagenEBIKE:hover {
-    opacity: 0.3;
+    opacity: 0.1;
+    transition: 1s;
 }
 
 
@@ -134,7 +157,8 @@ body {
 }
 
 .cuadrado .imagenURBAN:hover {
-    opacity: 0.3;
+    opacity: 0.1;
+    transition: 1s;
 }
 
 :root {
@@ -225,15 +249,53 @@ h3 {
     color: #f5c44a;
 }
 
+
+/* Estilos para la ventana modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #f5c44a;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    position: relative;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+}
+
+.modal-content a {
+    color: black;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
 /* Parte del CSS para el formulario */
 .formulario {
     display: flex;
     flex-direction: column;
-    background-image: url("bicicleta\ portada.jpg");
+    background-image: url("bicicleta portada.jpg");
     background-size: cover;
     font-family: 'Lobster', cursive;
     font-size: 1.2em;
-    justify-content: center;
+
     color: #f5c44a;
 }
 
@@ -255,7 +317,7 @@ h3 {
 
 .tamañoFuente {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: baseline;
     color: #f5c44a;
     min-width: 500px;
@@ -278,7 +340,9 @@ h1 {
 
 #nombreUsuario {
     position: absolute;
-    top: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    top: 2px;
     right: 5px;
-    color: black;
+
 }
